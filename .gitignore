@@ -1,2 +1,4 @@
 .vagrant
 tmp/*
+web/application.css
+web/application.min.js
