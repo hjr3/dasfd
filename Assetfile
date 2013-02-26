@@ -1,0 +1,36 @@
+# Assetfile
+require 'rake-pipeline-web-filters'
+
+output "web"
+
+input "javascripts" do
+  match "**/*.js" do
+    minispade :module_id_generator => proc { |input|
+        input.path.dup.sub(/\.js$/, '')
+    }
+    concat "application.js"
+    uglify
+  end
+
+  match "**/*.coffee" do
+    coffee_script
+    minispade :module_id_generator => proc { |input|
+        input.path.dup.sub(/\.js$/, '')
+    }
+    concat "application.js"
+    uglify
+  end
+end
+
+input "stylesheets" do
+  match "**/*.sass" do
+    sass
+  end
+
+  match "**/*.css" do
+    concat "application.css"
+    #yui_css
+  end
+end
+
+# vim:ft=ruby

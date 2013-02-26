@@ -1,0 +1,39 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>Ember.js Sandbox</title>
+
+    <link rel="stylesheet" href="application.css" type="text/css">
+    <script type="text/x-handlebars" data-template-name="index">
+        <div>Hello, {{firstName}} {{lastName}}</div>
+    </script>
+</head>
+<body>
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="handlebars.js"></script>
+    <script type="text/javascript" src="ember-1.0.0-pre.4.js"></script>
+    <script type="text/javascript" src="minispade.js"></script>
+    <script type="text/javascript" src="application.min.js"></script>
+
+    <script type="text/x-handlebars">
+        <header>
+            <h1>Ember.js Sandbox</h1>
+        </header>
+
+        <div>
+            {{outlet}}
+        </div>
+
+        <footer>
+            &copy; 2013 Herman J. Radtke III
+        </footer>
+    </script>
+
+    <script type="text/javascript">
+        window.App = Ember.Application.create();
+        minispade.require('index_controller');
+
+    </script>
+
+</body>
+</html>
