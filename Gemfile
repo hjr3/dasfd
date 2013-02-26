@@ -13,5 +13,6 @@ gem "json"
 gem "therubyracer"
 gem "stylus"
 gem "rake-pipeline-web-filters", "~> 0.7.0"
+gem "travis"
 
 # vim:ft=ruby
