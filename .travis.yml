@@ -1,16 +1,22 @@
 rvm:
     - 1.9.3
+
 bundler_args: --without development
+
 language: ruby
+
 notifications:
     email: false
+
 before_script:
-    - "gem install travis-artifacts"
+    - gem install travis-artifacts
+
 script: 
     - bundle
     - bundle exec rakep build
-aftrer_success: # and this only on success
-    - "travis-artifacts upload --path web/ --target-path /"
+
+after_script:
+    - travis-artifacts upload --path web/ --target-path /
 env:
   global:
   - "ARTIFACTS_AWS_REGION=us-east-1"
