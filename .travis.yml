@@ -18,7 +18,7 @@ after_script:
     - travis-artifacts upload --path web/
 env:
   global:
-  - "ARTIFACTS_S3_BUCKET=us-east-1"
-  - "ARTIFACTS_AWS_REGION=dasfd.com"
+  - "ARTIFACTS_S3_BUCKET=dasfd.com"
+  - "ARTIFACTS_AWS_REGION=us-east-1"
   - secure: "a1FBKne3Sak2zROlhsjaJ74NJ9UTNs2L++PbV6tvx+l6wrCLrFzqRHJigymo\nPqhqELnag2hyDUjCTw7IzuUGSbg2+kLUFr9pITthmejzvIffOec5TeeDTgKz\ni6Qq9OqVSnmIN4ely6UXX/Etr5iMCu7cv6CDTEUb3pDCio25kPs="
   - secure: "NgUbZiIT3GIm8zoD6FA0nfMs69F7Rjp2B6XD/2G7Ca6MYbwzlewukLTw+kab\nX43n4/J2D90U0OTdNZzImGVfSr0idzFhKEYdXytUlwjZdVtYaV4WXv/CazOL\nOgfDhaFgBDye46JnMwRdmZLr8BOBtHh6YHtdoKR3puZX5KV1I6I="
