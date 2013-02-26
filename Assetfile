@@ -23,8 +23,9 @@ input "javascripts" do
 end
 
 input "stylesheets" do
-  match "**/*.sass" do
+  match "**/*.scss" do
     sass
+    concat "application.css"
   end
 
   match "**/*.css" do
