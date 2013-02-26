@@ -7,4 +7,5 @@ node_js:
 notifications:
     email: false
 script: 
+    - bundle
     - bundle exec rakep build
