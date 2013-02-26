@@ -16,7 +16,7 @@ script:
     - bundle exec rakep build
 
 after_script:
-    - travis-artifacts upload --path web/ --target-path /
+    - travis-artifacts upload --path web/
 env:
   global:
   - "ARTIFACTS_S3_BUCKET=us-east-1"
